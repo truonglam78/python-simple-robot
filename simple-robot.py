@@ -6,8 +6,11 @@ import speech_recognition
 my_name = "William Lam Nguyen"
 robot_ear = speech_recognition.Recognizer()
 robot_mouth = pyttsx3.init()
-voices = robot_mouth.getProperty('voices')
-robot_mouth.setProperty('voice', voices[0].id)
+# default voice is male voice.
+# below code will change voices to female voice
+# but female voice is too fast and the voice is not clearly
+# voices = robot_mouth.getProperty('voices')
+# robot_mouth.setProperty('voice', voices[1].id)
 
 def printRobot(msg):
     print("Robot: " + msg)
