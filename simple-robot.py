@@ -32,7 +32,7 @@ def listen():
     try:
         you = robot_ear.recognize_google(audio)
     except:
-        you = "You said nothing"
+        you = ""
 
     printYou(you)
     return you
@@ -55,12 +55,14 @@ def understand(you):
         robot_brain = now.strftime("%H hours %M minutes %S seconds")
     elif "wife" in you:
         robot_brain = "Any beautiful girls, but not Tram Phan"
+    elif "thank" in you:
+        robot_brain = "You are welcome"
     elif "bye" in you:
         robot_brain = "Bye " + my_name
         say(robot_brain)
         return False
     else:
-        robot_brain = "I can't hear you, please try again"
+        robot_brain = "Please say something else"
 
     return robot_brain
 
